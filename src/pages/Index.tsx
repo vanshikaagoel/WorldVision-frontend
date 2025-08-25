@@ -38,9 +38,9 @@ const Index = () => {
                 World Vision Analytics
               </span>
             </div>
-            <Link to="/login">
+            <Link to="/login&signup">
               <Button variant="outline" className="border-border/50">
-                Sign In
+                Sign In/Sign Up
               </Button>
             </Link>
           </div>
@@ -71,8 +71,8 @@ const Index = () => {
             <div className="flex flex-col gap-4 justify-center items-center animate-fade-in">
               <p className="text-muted-foreground">
                 Ready to get started? 
-                <Link to="/login" className="text-primary hover:text-primary/80 ml-1 underline">
-                  Sign up here
+                <Link to="/login&signup" className="text-primary hover:text-primary/80 ml-1 underline">
+                  Sign up/Sign in here
                 </Link>
               </p>
             </div>

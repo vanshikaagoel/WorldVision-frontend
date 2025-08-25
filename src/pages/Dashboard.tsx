@@ -8,11 +8,12 @@ import BarChart from '@/components/charts/BarChart';
 import DashboardFilters from '@/components/DashboardFilters';
 import { getGDPTrendData, getUnemploymentData, getInflationData, getAvailableYears } from '@/utils/mockData';
 import { LogOut, User, BarChart3, TrendingUp, DollarSign, Users, Filter } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard: React.FC = () => {
   const { user, logout } = useAuth();
   const { toast } = useToast();
-  
+  const navigate = useNavigate();
   const years = getAvailableYears();
   const [selectedRegion, setSelectedRegion] = useState('all');
   const [selectedStartYear, setSelectedStartYear] = useState(Math.min(...years));
@@ -24,6 +25,7 @@ const Dashboard: React.FC = () => {
       title: "Logged out",
       description: "You have been successfully logged out.",
     });
+    navigate('/');
   };
 
   // Generate chart data based on filters
