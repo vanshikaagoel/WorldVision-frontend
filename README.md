@@ -147,3 +147,10 @@ This project is licensed under the MIT License. See LICENSE file for details.
 - Built with modern web technologies
 - Inspired by data-driven decision making
 - Designed for economic analysts and researchers
+
+
+---
+
+### Test User Details
+- **Username:** test1
+- **Password:** test1@123
