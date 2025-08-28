@@ -39,13 +39,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsLoading(true);
     
     try {
-      console.log('📡 Making request to:', "http://127.0.0.1:8000/auth/login/");
+      console.log('📡 Making request to:', "https://worldvision-api.onrender.com/auth/login/");
       console.log('📤 Request data:', { username, password: '***' });
 
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
 
-      const res = await fetch("http://127.0.0.1:8000/auth/login/", {
+      const res = await fetch("https://worldvision-api.onrender.com/auth/login/", {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -108,12 +108,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsLoading(true);
     
     try {
-      console.log('📡 Making request to:', "http://127.0.0.1:8000/auth/signup/");
+      console.log('📡 Making request to:', "https://worldvision-api.onrender.com/auth/signup/");
 
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 10000);
 
-      const res = await fetch("http://127.0.0.1:8000/auth/signup/", {
+      const res = await fetch("https://worldvision-api.onrender.com/auth/signup/", {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
